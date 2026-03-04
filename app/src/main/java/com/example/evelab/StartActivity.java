@@ -1,10 +1,10 @@
 package com.example.evelab;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,34 +12,29 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
-
-
-
+public class StartActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_start);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Bundle extras = getIntent().getExtras();
-        String msg = extras.getString("message");
-        TextView textView = findViewById(R.id.textViewOutput);
-        textView.setText(msg);
-    }
 
 
+        Button button = findViewById(R.id.buttonUIEvent);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity.this, MainActivity.class);
+                intent.putExtra("message", "Hello World!");
+                startActivity(intent);
+            }
+        });
 
-    public void displayMessage(View view) {
-        TextView textView = findViewById(R.id.textViewOutput);
-        EditText editText = findViewById(R.id.editTextInput);
-        textView.setText(editText.getText());
-
-        Toast.makeText(this, "OK button clicked.", Toast.LENGTH_LONG).show();
     }
 }
