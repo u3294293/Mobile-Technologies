@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "EveLab"
+rootProject.name = "Week_4"
 include(":app")
  
