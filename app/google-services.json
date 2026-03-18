@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "733357024629",
+    "firebase_url": "https://mobile-tech-week-5-default-rtdb.firebaseio.com",
+    "project_id": "mobile-tech-week-5",
+    "storage_bucket": "mobile-tech-week-5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733357024629:android:e3575475558a0fa0369f3c",
+        "android_client_info": {
+          "package_name": "com.example.evelab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3aYn_AdNX1m3vGe8rgyE-fHh2rS-DREM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
