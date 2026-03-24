@@ -45,5 +45,13 @@ public class StartActivity extends AppCompatActivity {
             }
         });
 
+        Button buttonFirebase = findViewById(R.id.buttonFirebaseML);
+        buttonFirebase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity.this, MLKitActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
