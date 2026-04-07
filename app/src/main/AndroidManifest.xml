@@ -20,7 +20,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EveLab">
-        <activity android:name=".ListViewActivity" android:exported="false" />
+        <activity
+            android:name=".SQLiteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListViewActivity"
+            android:exported="false" />
         <activity
             android:name=".MLKitActivity"
             android:exported="false" />

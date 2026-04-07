@@ -52,5 +52,14 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button buttonSQLite = findViewById(R.id.buttonSQLite);
+        buttonSQLite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StartActivity.this, SQLiteActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
